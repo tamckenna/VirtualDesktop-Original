@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace VirtualDesktop
@@ -270,6 +271,34 @@ namespace VirtualDesktop
 	#region public interface
 	public class Desktop
 	{
+
+        private const  int SW_SHOWNORMAL = 1;
+
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        private static extern bool ShowWindow(IntPtr hwnd, int nCmdShow);
+
+
+        [DllImport("user32.dll", SetLastError = true)]
+        private static extern bool SetForegroundWindow(IntPtr hwnd);
+
+        public void SetForeground(string processName)
+        {
+            Process[] processes = Process.GetProcessesByName(processName);
+
+            foreach (Process p in processes)
+            {
+                try
+                {
+                    if (Desktop.Current.HasWindow(p.MainWindowHandle))
+                    {
+                        ShowWindow(p.MainWindowHandle, SW_SHOWNORMAL);
+                        SetForegroundWindow(p.MainWindowHandle);
+                    }
+                }
+                catch (Exception e) { }
+            }
+        }
+
 		// get process id to window handle
 		[DllImport("user32.dll")]
 		private static extern int GetWindowThreadProcessId(IntPtr hWnd, out int lpdwProcessId);

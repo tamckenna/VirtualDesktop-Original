@@ -44,6 +44,8 @@ namespace VirtualDesktop
             bool wrapdesktops = true;
             if (wrapdesktops && (VirtualDesktop.Desktop.FromDesktop(VirtualDesktop.Desktop.Current) == 0)) { VirtualDesktop.Desktop.FromIndex(VirtualDesktop.Desktop.Count - 1).MakeVisible(); }
             else { VirtualDesktop.Desktop.Current.Left.MakeVisible(); }
+            //Testing
+            VirtualDesktop.Desktop.Current.SetForeground("Spotify");
         }
 
         private void switchDesktopRight(object state)
@@ -52,6 +54,9 @@ namespace VirtualDesktop
             bool wrapdesktops = true;
             if (wrapdesktops && (VirtualDesktop.Desktop.FromDesktop(VirtualDesktop.Desktop.Current) == 0)) { VirtualDesktop.Desktop.FromIndex(VirtualDesktop.Desktop.Count + 1).MakeVisible(); }
             else { VirtualDesktop.Desktop.Current.Right.MakeVisible(); }
+            //Testing
+            VirtualDesktop.Desktop.Current.SetForeground("Spotify");
+            
         }
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e){

@@ -1,0 +1,14 @@
+C:\var\src\VirtualDesktop\bin\Debug\VirtualDesktop.exe.config
+C:\var\src\VirtualDesktop\bin\Debug\VirtualDesktop.exe
+C:\var\src\VirtualDesktop\bin\Debug\VirtualDesktop.pdb
+C:\var\src\VirtualDesktop\obj\Debug\MainWindow.g.cs
+C:\var\src\VirtualDesktop\obj\Debug\App.g.cs
+C:\var\src\VirtualDesktop\obj\Debug\VirtualDesktop_MarkupCompile.cache
+C:\var\src\VirtualDesktop\obj\Debug\VirtualDesktop_MarkupCompile.lref
+C:\var\src\VirtualDesktop\obj\Debug\MainWindow.baml
+C:\var\src\VirtualDesktop\obj\Debug\VirtualDesktop.g.resources
+C:\var\src\VirtualDesktop\obj\Debug\VirtualDesktop.Properties.Resources.resources
+C:\var\src\VirtualDesktop\obj\Debug\VirtualDesktop.csproj.GenerateResource.cache
+C:\var\src\VirtualDesktop\obj\Debug\VirtualDesktop.csproj.CoreCompileInputs.cache
+C:\var\src\VirtualDesktop\obj\Debug\VirtualDesktop.exe
+C:\var\src\VirtualDesktop\obj\Debug\VirtualDesktop.pdb

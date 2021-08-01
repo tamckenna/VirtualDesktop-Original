@@ -33,29 +33,29 @@ namespace VirtualDesktop
 
         private void staRightSwitch()
         {
-            var thread = new Thread(switchDesktopLeft);
+            var thread = new Thread(switchDesktopRight);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
-
+        
         private void switchDesktopLeft(object state)
         {
             //File.WriteAllText(@"C:\Users\dev\Desktop\test.log", "LEFT FIRED!");
-            bool wrapdesktops = true;
+            bool wrapdesktops = false;
             if (wrapdesktops && (VirtualDesktop.Desktop.FromDesktop(VirtualDesktop.Desktop.Current) == 0)) { VirtualDesktop.Desktop.FromIndex(VirtualDesktop.Desktop.Count - 1).MakeVisible(); }
             else { VirtualDesktop.Desktop.Current.Left.MakeVisible(); }
             //Testing
-            VirtualDesktop.Desktop.Current.SetForeground("Spotify");
+            VirtualDesktop.Desktop.Current.SetForeground("RocketLeague");
         }
 
         private void switchDesktopRight(object state)
         {
             //File.WriteAllText(@"C:\Users\dev\Desktop\test.log", "RIGHT FIRED!");
-            bool wrapdesktops = true;
+            bool wrapdesktops = false;
             if (wrapdesktops && (VirtualDesktop.Desktop.FromDesktop(VirtualDesktop.Desktop.Current) == 0)) { VirtualDesktop.Desktop.FromIndex(VirtualDesktop.Desktop.Count + 1).MakeVisible(); }
             else { VirtualDesktop.Desktop.Current.Right.MakeVisible(); }
             //Testing
-            VirtualDesktop.Desktop.Current.SetForeground("Spotify");
+            VirtualDesktop.Desktop.Current.SetForeground("RocketLeague");
             
         }
 
